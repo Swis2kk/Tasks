@@ -21,5 +21,9 @@ public class SampleTest {
         Assert.assertThat(Sample.length(Arrays.asList(1, 2, 3, 4, 5)), CoreMatchers.is(CoreMatchers.equalTo(5)));
     }
 
-
+    @Test
+    public void whenNullLengthShouldThrowExeption() throws Exception {
+        int length = Sample.length(null);
+        Assert.assertThat(length, CoreMatchers.is(CoreMatchers.equalTo(new Exception())));
+    }
 }
