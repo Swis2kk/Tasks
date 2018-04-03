@@ -7,15 +7,9 @@ public class Sample {
 
     public static <T> int length(List <T> elements) {
         if (elements == null) {
-           throw new NullPointerException();
+           throw new IllegalArgumentException("null not accepted");
        } else {
            return elements.size();
        }
-    }
-
-
-    public static void main(String[] args) {
-
-        System.out.println(new ArrayList<>().size());
     }
 }
