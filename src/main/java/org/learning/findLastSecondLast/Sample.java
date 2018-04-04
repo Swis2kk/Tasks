@@ -1,10 +1,6 @@
 package org.learning.findLastSecondLast;
 
-import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-
-import static java.util.Arrays.asList;
 
 public class Sample {
 
