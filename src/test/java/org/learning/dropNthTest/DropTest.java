@@ -25,10 +25,5 @@ public class DropTest {
         assertThat(result).contains("a", "b");
     }
 
-    @Test
-    public void shouldReturnSameListWhenNIsZero() throws Exception {
-        List<String> result = Drop.dropEveryNth(Arrays.asList("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"), 0);
-        assertThat(result).hasSize(11);
-        assertThat(result).contains("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k");
-    }
+    
 }
