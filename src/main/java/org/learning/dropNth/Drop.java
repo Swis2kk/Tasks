@@ -1,24 +1,23 @@
 package org.learning.dropNth;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
+import java.util.*;
 
 public class Drop {
 
-    public static <T> List<T> dropEveryNth (List<T> elements, int n) {
-        IntStream.range(0, elements.size()).filter(value -> value % 3 == 0).mapToObj(()->elements.)
-        return elements;
-    }
-
-    private static boolean isOdd() {
-
-    }
-
-    public static void main(String[] args) {
-        dropEveryNth(new LinkedList<>(Arrays.asList(1,2,3)), 2);
+    public static <T> List<T> dropEveryNth(List<T> elements, int n) {
+        Objects.requireNonNull(elements, "elements required not null");
+        if (n > elements.size() || n < 1) {
+            return elements;
+        }
+        List<T> list = new ArrayList<>();
+        int count = 1;
+        for (T t : elements) {
+            if (count % n != 0) {
+                list.add(t);
+            }
+            count++;
+        }
+        return list;
     }
 }
+
