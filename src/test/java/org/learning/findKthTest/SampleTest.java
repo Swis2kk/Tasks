@@ -15,5 +15,4 @@ public class SampleTest {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
         Assert.assertThat(Sample.kth(numbers, 2), CoreMatchers.is(CoreMatchers.equalTo(3)));
     }
-
 }
