@@ -3,7 +3,6 @@ package org.learning.list;
 import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Test;
-import org.learning.list.FindKth;
 
 import java.util.Arrays;
 import java.util.List;

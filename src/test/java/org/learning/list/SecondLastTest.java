@@ -2,7 +2,7 @@ package org.learning.list;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.learning.list.SecondLast;
+
 
 import java.util.List;
 

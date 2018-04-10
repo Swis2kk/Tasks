@@ -1,7 +1,6 @@
 package org.learning.list;
 
 import org.junit.Test;
-import org.learning.list.Drop;
 
 import java.util.Arrays;
 import java.util.List;

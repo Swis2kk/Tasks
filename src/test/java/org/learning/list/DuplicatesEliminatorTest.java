@@ -1,8 +1,6 @@
 package org.learning.list;
 
 import org.junit.Test;
-import org.learning.list.DuplicatesEliminator;
-
 import java.util.Arrays;
 import java.util.List;
 
