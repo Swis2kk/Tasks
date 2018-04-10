@@ -1,4 +1,4 @@
-package org.learning.eliminator;
+package org.learning.list;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,8 @@
-package org.learning.findLastSecondLast;
+package org.learning.list;
 
 import java.util.List;
 
-public class Sample {
-
+public class SecondLast {
 
     public static <T> T last(List<T> elements) {
        if (elements.size() >= 1) {

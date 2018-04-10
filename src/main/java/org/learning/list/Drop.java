@@ -1,6 +1,8 @@
-package org.learning.dropNth;
+package org.learning.list;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class Drop {
 

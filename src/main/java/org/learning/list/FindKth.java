@@ -1,8 +1,8 @@
-package org.learning.findKth;
+package org.learning.list;
 
 import java.util.List;
 
-public class Sample {
+public class FindKth {
 
     public static <T> T kth(List<T> elements, int k) {
         if (elements == null) {
