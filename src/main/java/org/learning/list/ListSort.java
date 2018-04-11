@@ -1,31 +1,28 @@
 package org.learning.list;
 
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class ListSort {
 
     public static <T> List<List<T>> lsort(List<List<T>> input) {
         Objects.requireNonNull(input, "input required not null");
-        Collections.sort(input, Comparator.comparingInt(List::size));
+        input.sort(Comparator.comparing(List::size));
         return input;
     }
 
     public static <T> List<List<T>> lfsort(List<List<T>> input) {
-
-
-        return null;
-    }
-
-    public static void main(String[] args) {
-        System.out.print(lfsort(Arrays.asList(Arrays.asList("a", "b", "c"),
-                Arrays.asList("d", "e"),
-                Arrays.asList("f", "g", "h"),
-                Arrays.asList("d", "e"),
-                Arrays.asList("i", "j", "k"),
-                Arrays.asList("i", "j", "k", "k", "k"),
-                Arrays.asList("m", "n"),
-                Arrays.asList("m", "n"),
-                Arrays.asList("o"))));
+        Objects.requireNonNull(input, "input required not null");
+        return input.stream()
+                .collect(Collectors.groupingBy(List::size))
+                .values()
+                .stream()
+                .sorted(Comparator.comparingInt(List::size))
+                .flatMap(Collection::stream)
+                .collect(Collectors.toList());
     }
 }

@@ -11,7 +11,8 @@ public class ListSortTest {
 
     @Test
     public void shouldSortByElementLength() throws Exception {
-        List<List<String>> input = Arrays.asList(Arrays.asList("a", "b", "c"),
+        List<List<String>> input = Arrays.asList(
+                Arrays.asList("a", "b", "c"),
                 Arrays.asList("d", "e"),
                 Arrays.asList("f", "g", "h"),
                 Arrays.asList("d", "e"),
@@ -21,7 +22,8 @@ public class ListSortTest {
 
         List<List<String>> result = ListSort.lsort(input);
 
-        assertThat(result).isEqualTo(Arrays.asList(Arrays.asList("o"),
+        assertThat(result).isEqualTo(Arrays.asList(
+                Arrays.asList("o"),
                 Arrays.asList("d", "e"),
                 Arrays.asList("d", "e"),
                 Arrays.asList("m", "n"),
@@ -32,7 +34,8 @@ public class ListSortTest {
 
     @Test
     public void shouldSortByLengthFrequency() throws Exception {
-        List<List<String>> input = Arrays.asList(Arrays.asList("a", "b", "c"),
+        List<List<String>> input = Arrays.asList(
+                Arrays.asList("a", "b", "c"),
                 Arrays.asList("d", "e"),
                 Arrays.asList("f", "g", "h"),
                 Arrays.asList("d", "e"),
@@ -42,8 +45,9 @@ public class ListSortTest {
 
         List<List<String>> result = ListSort.lfsort(input);
 
-        assertThat(result).isEqualTo(Arrays.asList(Arrays.asList("i", "j", "k", "l"),
+        assertThat(result).isEqualTo(Arrays.asList(
                 Arrays.asList("o"),
+                Arrays.asList("i", "j", "k", "l"),
                 Arrays.asList("a", "b", "c"),
                 Arrays.asList("f", "g", "h"),
                 Arrays.asList("d", "e"),
