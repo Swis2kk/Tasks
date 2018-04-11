@@ -1,14 +1,12 @@
 package org.learning.list;
 
 import java.util.List;
+import java.util.Objects;
 
 public class FindElement {
 
     public static <T> int length(List<T> elements) {
-        if (elements == null) {
-            throw new IllegalArgumentException("null not accepted");
-        } else {
+        Objects.requireNonNull(elements, "elements required not null");
             return elements.size();
-        }
     }
 }

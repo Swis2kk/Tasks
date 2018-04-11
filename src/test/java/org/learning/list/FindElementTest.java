@@ -28,8 +28,8 @@ public class FindElementTest {
 
     @Test
     public void whenNullLengthShouldThrowExeption() throws Exception {
-        expected.expect(IllegalArgumentException.class);
-        expected.expectMessage("null not accepted");
+        expected.expect(NullPointerException.class);
+        expected.expectMessage("elements required not null");
         FindElement.length(null);
     }
 }
