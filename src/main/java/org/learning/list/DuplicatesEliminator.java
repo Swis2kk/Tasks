@@ -11,6 +11,7 @@ public class DuplicatesEliminator {
         if (elements.isEmpty()) {
             throw new IllegalArgumentException("Entry must not be empty");
         }
+
         List<T> list = new ArrayList<>();
         list.add(elements.get(0));
         for (int i = 1; i < elements.size(); i++) {
